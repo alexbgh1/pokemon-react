@@ -1,0 +1,186 @@
+/*---. Mobile First .---*/
+
+.bg__modal {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  outline: none;
+
+  position: fixed;
+  z-index: 2;
+}
+
+/*---. Modal Skeleton .---*/
+.modal {
+  width: 350px;
+  height: 460px;
+  background-color: #ffffffef;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+@media screen and (min-width: 768px) {
+  .modal {
+    width: 600px;
+    height: 500px;
+  }
+}
+
+/*---. Modal Header .---*/
+.modal__header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  text-transform: capitalize;
+  margin-bottom: 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal__header > h2 {
+  font-size: 1.6rem;
+  margin: 0;
+}
+
+.modal__header__close {
+  font-size: 1.6rem;
+  cursor: pointer;
+  justify-self: end;
+  background-color: rgba(248, 67, 67, 0.952);
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.modal__header__id {
+  font-size: 1.1rem;
+  color: #999;
+  text-transform: lowercase;
+}
+
+/*---. Modal Body .---*/
+.modal__body {
+  display: grid;
+  grid-template-areas: "img img" "stats types";
+  justify-items: center;
+  grid-gap: 20px;
+}
+
+.modal__body__img {
+  border-radius: 5px;
+}
+
+.modal__body__img > img {
+  object-fit: contain;
+}
+
+/*-. Modal Body Stats & Modal Body Types .-*/
+.modal__body__stats {
+  grid-area: stats;
+  position: relative;
+}
+
+.modal__body__stats span {
+  font-size: 1rem;
+}
+
+.modal__body__stats ul,
+.modal__body__types ul {
+  font-size: 1.2rem;
+  padding-left: 0.3rem;
+}
+
+.modal__body__stats li,
+.modal__body__types li {
+  list-style: none;
+  margin-bottom: 0.3rem;
+}
+
+.modal__body__stats__bar {
+  width: 100%;
+  border-radius: 0 3px 3px 0;
+  height: 12px;
+
+  position: relative;
+}
+
+.modal__body__stats__bar > span {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+/*-. Modal Body Types .-*/
+
+.modal__body__types {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  grid-area: types;
+  width: 100%;
+}
+.modal__body__types > h3 {
+  text-align: center;
+}
+
+.modal__body__types > ul li {
+  font-size: 1.2rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal__body__types > ul {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 10px;
+}
+
+/*---. Modal arrows .---*/
+.modal__leftarrow,
+.modal__rightarrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  background-color: var(--blue);
+  color: var(--yellow);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1.2rem;
+}
+.modal__rightarrow:hover,
+.modal__leftarrow:hover {
+  background-color: var(--yellow);
+  color: var(--blue);
+}
+
+.modal__rightarrow {
+  right: 0.5%;
+}
+
+.modal__leftarrow {
+  left: 0.5%;
+}
+
+@media screen and (min-width: 768px) {
+  .modal__rightarrow {
+    right: 3%;
+  }
+  .modal__leftarrow {
+    left: 3%;
+  }
+}

@@ -1,0 +1,79 @@
+/*---. Slider .---*/
+/*-. Slider upper text .-*/
+.slider__upper {
+  position: absolute;
+  top: 10%;
+}
+
+/*-. Slider content .-*/
+.slider {
+  overflow: hidden;
+  position: relative;
+  margin: 0.1rem;
+  transition-property: box-shadow, border, opacity, z-index;
+  transition-duration: 0.5s;
+
+  width: 100%;
+  max-width: 160px;
+  max-height: 100px;
+
+  /* Grid area for Modal */
+  grid-area: img;
+}
+
+@media screen and (min-width: 768px) {
+  .slider {
+    max-width: 200px;
+    max-height: 150px;
+  }
+}
+
+/*-. Slider img .-*/
+.slider > img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.slider--active {
+  opacity: 1;
+  z-index: 2;
+}
+
+.slider--inactive {
+  display: none;
+}
+
+/*-. Slider Dots .-*/
+.slider__dots {
+  width: 100%;
+  height: 20px;
+
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  transform: translateX(-50%);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.slider__dots--active,
+.slider__dots--inactive {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  padding: 5px;
+  border: 1px solid #fff;
+  cursor: pointer;
+}
+
+.slider__dots--active {
+  background-color: rgba(14, 13, 13, 0.5);
+}
+
+.slider__dots--inactive {
+  background-color: transparent;
+}
