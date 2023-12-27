@@ -347,210 +347,134 @@
 
 /*--. Info Card .--*/
 .bg-linear-normal {
-  background: linear-gradient(
-    155deg,
-    var(--normal-border) 1%,
-    var(--normal) 40%,
-    var(--normal-border) 90%
-  );
+  background-color: var(--normal);
+  box-shadow: inset 0px -2px 5px 0px var(--normal-border);
   filter: brightness(1.1);
   border: 1px solid var(--normal-border);
 }
 
 .bg-linear-fire {
-  background: linear-gradient(
-    155deg,
-    var(--fire-border) 1%,
-    var(--fire) 40%,
-    var(--fire-border) 90%
-  );
+  background-color: var(--fire);
+  box-shadow: inset 0px -2px 5px 0px var(--fire-border);
   filter: brightness(1.1);
   border: 1px solid var(--fire-border);
 }
 
 .bg-linear-fighting {
-  background: linear-gradient(
-    155deg,
-    var(--fighting-border) 1%,
-    var(--fighting) 40%,
-    var(--fighting-border) 90%
-  );
+  background-color: var(--fighting);
+  box-shadow: inset 0px -2px 5px 0px var(--fighting-border);
   filter: brightness(1.1);
   border: 1px solid var(--fighting-border);
 }
 
 .bg-linear-water {
-  background: linear-gradient(
-    155deg,
-    var(--water-border) 1%,
-    var(--water) 40%,
-    var(--water-border) 90%
-  );
+  background-color: var(--water);
+  box-shadow: inset 0px -2px 5px 0px var(--water-border);
   filter: brightness(1.1);
   border: 1px solid var(--water-border);
 }
 
 .bg-linear-flying {
-  background: linear-gradient(
-    155deg,
-    var(--flying-border) 1%,
-    var(--flying) 40%,
-    var(--flying-border) 90%
-  );
+  background-color: var(--flying);
+  box-shadow: inset 0px -2px 5px 0px var(--flying-border);
   filter: brightness(1.1);
   border: 1px solid var(--flying-border);
 }
 
 .bg-linear-grass {
-  background: linear-gradient(
-    155deg,
-    var(--grass-border) 1%,
-    var(--grass) 40%,
-    var(--grass-border) 90%
-  );
+  background-color: var(--grass);
+  box-shadow: inset 0px -2px 5px 0px var(--grass-border);
   filter: brightness(1.1);
   border: 1px solid var(--grass-border);
 }
 
 .bg-linear-poison {
-  background: linear-gradient(
-    155deg,
-    var(--poison-border) 1%,
-    var(--poison) 40%,
-    var(--poison-border) 90%
-  );
+  background-color: var(--poison);
+  box-shadow: inset 0px -2px 5px 0px var(--poison-border);
   filter: brightness(1.1);
   border: 1px solid var(--poison-border);
 }
 
 .bg-linear-electric {
-  background: linear-gradient(
-    155deg,
-    var(--electric-border) 1%,
-    var(--electric) 40%,
-    var(--electric-border) 90%
-  );
+  background-color: var(--electric);
+  box-shadow: inset 0px -2px 5px 0px var(--electric-border);
   filter: brightness(1.1);
   border: 1px solid var(--electric-border);
 }
 
 .bg-linear-ground {
-  background: linear-gradient(
-    155deg,
-    var(--ground-border) 1%,
-    var(--ground) 40%,
-    var(--ground-border) 90%
-  );
+  background-color: var(--ground);
+  box-shadow: inset 0px -2px 5px 0px var(--ground-border);
   filter: brightness(1.1);
   border: 1px solid var(--ground-border);
 }
 
 .bg-linear-psychic {
-  background: linear-gradient(
-    155deg,
-    var(--psychic-border) 1%,
-    var(--psychic) 40%,
-    var(--psychic-border) 90%
-  );
+  background-color: var(--psychic);
+  box-shadow: inset 0px -2px 5px 0px var(--psychic-border);
   filter: brightness(1.1);
   border: 1px solid var(--psychic-border);
 }
 
 .bg-linear-rock {
-  background: linear-gradient(
-    155deg,
-    var(--rock-border) 1%,
-    var(--rock) 40%,
-    var(--rock-border) 90%
-  );
+  background-color: var(--rock);
+  box-shadow: inset 0px -2px 5px 0px var(--rock-border);
   filter: brightness(1.1);
   border: 1px solid var(--rock-border);
 }
 
 .bg-linear-ice {
-  background: linear-gradient(
-    155deg,
-    var(--ice-border) 1%,
-    var(--ice) 40%,
-    var(--ice-border) 90%
-  );
+  background-color: var(--ice);
+  box-shadow: inset 0px -2px 5px 0px var(--ice-border);
   filter: brightness(1.1);
   border: 1px solid var(--ice-border);
 }
 
 .bg-linear-bug {
-  background: linear-gradient(
-    155deg,
-    var(--bug-border) 1%,
-    var(--bug) 40%,
-    var(--bug-border) 90%
-  );
+  background-color: var(--bug);
+  box-shadow: inset 0px -2px 5px 0px var(--bug-border);
   filter: brightness(1.1);
   border: 1px solid var(--bug-border);
 }
 
 .bg-linear-dragon {
-  background: linear-gradient(
-    155deg,
-    var(--dragon-border) 1%,
-    var(--dragon) 40%,
-    var(--dragon-border) 90%
-  );
+  background-color: var(--dragon);
+  box-shadow: inset 0px -2px 5px 0px var(--dragon-border);
   filter: brightness(1.1);
   border: 1px solid var(--dragon-border);
 }
 
 .bg-linear-ghost {
-  background: linear-gradient(
-    155deg,
-    var(--ghost-border) 1%,
-    var(--ghost) 40%,
-    var(--ghost-border) 90%
-  );
+  background-color: var(--ghost);
+  box-shadow: inset 0px -2px 5px 0px var(--ghost-border);
   filter: brightness(1.1);
   border: 1px solid var(--ghost-border);
 }
 
 .bg-linear-dark {
-  background: linear-gradient(
-    155deg,
-    var(--dark-border) 1%,
-    var(--dark) 40%,
-    var(--dark-border) 90%
-  );
+  background-color: var(--dark);
+  box-shadow: inset 0px -2px 5px 0px var(--dark-border);
   filter: brightness(1.1);
   border: 1px solid var(--dark-border);
 }
 
 .bg-linear-steel {
-  background: linear-gradient(
-    155deg,
-    var(--steel-border) 1%,
-    var(--steel) 40%,
-    var(--steel-border) 90%
-  );
+  background-color: var(--steel);
+  box-shadow: inset 0px -2px 5px 0px var(--steel-border);
   filter: brightness(1.1);
   border: 1px solid var(--steel-border);
 }
 
 .bg-linear-fairy {
-  background: linear-gradient(
-    155deg,
-    var(--fairy-border) 1%,
-    var(--fairy) 40%,
-    var(--fairy-border) 90%
-  );
+  background-color: var(--fairy);
+  box-shadow: inset 0px -2px 5px 0px var(--fairy-border);
   filter: brightness(1.1);
   border: 1px solid var(--fairy-border);
 }
 
 .bg-linear-unknow {
-  background: linear-gradient(
-    155deg,
-    var(--unknow-border) 1%,
-    var(--unknow) 40%,
-    var(--unknow-border) 90%
-  );
+  background-color: var(--unknow);
+  box-shadow: inset 0px -2px 5px 0px var(--unknow-border);
   filter: brightness(1.1);
   border: 1px solid var(--unkown-border);
 }

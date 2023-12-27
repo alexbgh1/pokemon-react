@@ -51,7 +51,7 @@ h3 {
   justify-content: space-between;
   align-items: center;
   max-height: 80px;
-  padding: 15px 5px;
+  padding: 15px 3rem;
   background-color: var(--blue);
 }
 
@@ -187,10 +187,10 @@ input[type="submit"]:hover {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
-  border-radius: 5px;
+  padding: 1rem 0.75rem;
+  border-radius: 4px;
   background-color: var(--blue);
-  box-shadow: 0 0 10px 2px rgba(34, 74, 207, 0.5);
+  box-shadow: 0 0 3px 0px rgba(34, 74, 207, 0.5);
   color: var(--yellow);
 }
 
@@ -238,7 +238,7 @@ button {
   padding: 0.5rem 1rem;
   background-color: var(--blue);
   color: var(--yellow);
-  border-radius: 5px;
+  border-radius: 4px;
   transition-property: background-color, color;
   transition-duration: 0.1s;
   -webkit-user-select: none; /* Safari */
@@ -311,7 +311,7 @@ button:disabled {
   margin: 1rem;
   border-radius: 5px;
   background-color: #fff;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
 
   /* selection  */
   -webkit-user-select: none; /* Safari */
@@ -386,11 +386,11 @@ button:disabled {
   align-items: center;
   width: 80%;
   height: 100%;
-  padding: 0.5rem;
+  padding: 0.25rem 0.5rem;
   margin: 1rem;
   border-radius: 5px;
   background-color: #fff;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.15);
 }
 
 .pokemon_generalinfo > div > img {

@@ -253,13 +253,13 @@ const Modal = ({
             className="modal__leftarrow"
             onClick={() => moveModal("ArrowLeft")}
           >
-            <span>&lt;</span>
+            <span style={{ fontSize: "24px" }}>←</span>
           </div>
           <div
             className="modal__rightarrow"
             onClick={() => moveModal("ArrowRight")}
           >
-            <span>&gt; </span>
+            <span style={{ fontSize: "24px" }}>→</span>
           </div>
         </div>
       </div>
