@@ -4,7 +4,7 @@ import Formulario from "./components/Formulario";
 import Filters from "./components/Filters";
 import Pokemons from "./components/Pokemons";
 import Footer from "./components/Footer";
-import createArray from "./helpers/functions";
+import { createArray } from "./helpers/functions";
 
 import Spinner from "./components/Spinner";
 import Modal from "./components/Modal";
@@ -58,7 +58,6 @@ function App() {
         <Modal
           setShowModal={setShowModal}
           setPokemonObj={setPokemonObj}
-          setLoading={setLoading}
           pokemonObj={pokemonObj}
           filteredPokemons={filteredPokemons}
         />

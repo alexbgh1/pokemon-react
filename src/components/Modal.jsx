@@ -5,10 +5,11 @@ import Slider from "./Slider";
 import heightIcon from "../img/height_icon.png";
 import weightIcon from "../img/weight_icon.png";
 
+import { mapTemporaryStats } from "../helpers/functions";
+
 const Modal = ({
   setShowModal,
   setPokemonObj,
-  setLoading,
   pokemonObj,
   filteredPokemons,
 }) => {
@@ -23,56 +24,18 @@ const Modal = ({
   // Ref for modal - Allows for keyboard navigation
   const modalRef = useRef();
 
-  // Max stats - arbitrary
-  const HP = { HP_COLOR: "#ec4541", MAX_HP: 255 };
-  const ATK = { ATK_COLOR: "#f6de52", MAX_ATK: 190 };
-  const DEF = { DEF_COLOR: "#ed7f0f", MAX_DEF: 230 };
-  const SP_ATK = { SP_ATK_COLOR: "#56b0f1", MAX_SP_ATK: 194 };
-  const SP_DEF = { SP_DEF_COLOR: "#ad62f6", MAX_SP_DEF: 230 };
-  const SPEED = { SPEED_COLOR: "#f06ace", MAX_SPEED: 180 };
+  // Animation
+  const [animationClass, setAnimationClass] = useState("");
 
   // Focus modal on mount, this is for keyboard navigation "<-, ->, esc"
   useEffect(() => {
-    if (modalRef.current) {
-      modalRef.current.focus();
-    }
+    if (modalRef.current) modalRef.current.focus();
   }, []);
 
   useEffect(() => {
     // Set stats color
     // iterate stats without mutating original array
-    const tempStatsObj = stats.map((stat) => {
-      const tempStat = { ...stat };
-      switch (tempStat.name) {
-        case "hp":
-          tempStat.color = HP.HP_COLOR;
-          tempStat.max = HP.MAX_HP;
-          break;
-        case "attack":
-          tempStat.color = ATK.ATK_COLOR;
-          tempStat.max = ATK.MAX_ATK;
-          break;
-        case "defense":
-          tempStat.color = DEF.DEF_COLOR;
-          tempStat.max = DEF.MAX_DEF;
-          break;
-        case "special-attack":
-          tempStat.color = SP_ATK.SP_ATK_COLOR;
-          tempStat.max = SP_ATK.MAX_SP_ATK;
-          break;
-        case "special-defense":
-          tempStat.color = SP_DEF.SP_DEF_COLOR;
-          tempStat.max = SP_DEF.MAX_SP_DEF;
-          break;
-        case "speed":
-          tempStat.color = SPEED.SPEED_COLOR;
-          tempStat.max = SPEED.MAX_SPEED;
-          break;
-        default:
-          break;
-      }
-      return tempStat;
-    });
+    const tempStatsObj = mapTemporaryStats(stats);
 
     setStatsObj(tempStatsObj);
   }, [stats]);
@@ -87,13 +50,10 @@ const Modal = ({
     ) {
       setShowModal(false);
     }
-    return;
   };
 
   const moveModal = async (key) => {
     // Get current pokemon index
-    setLoading(true);
-
     const currentPokemonIndex = filteredPokemons.findIndex(
       (pokemon) => pokemon.id === id
     );
@@ -103,9 +63,11 @@ const Modal = ({
     switch (key) {
       case "ArrowRight":
         nextPokemonIndex = currentPokemonIndex + 1;
+        setAnimationClass("slideInRight");
         break;
       case "ArrowLeft":
         nextPokemonIndex = currentPokemonIndex - 1;
+        setAnimationClass("slideInLeft");
         break;
       case "Escape":
         setShowModal(false);
@@ -125,7 +87,6 @@ const Modal = ({
     // Set next pokemon
     const nextPokemon = filteredPokemons[nextPokemonIndex];
     setPokemonObj(nextPokemon);
-    setLoading(false);
   };
 
   const handleKeyDown = (e) => {
@@ -134,8 +95,6 @@ const Modal = ({
     if (actions.includes(e.key)) {
       moveModal(e.key);
     }
-
-    return;
   };
 
   const handleTouchStart = (e) => {
@@ -153,11 +112,8 @@ const Modal = ({
     const isRightSwipe = distance < -minSwipeDistance;
 
     // add your conditional logic here
-    if (isLeftSwipe) {
-      moveModal("ArrowRight");
-    } else if (isRightSwipe) {
-      moveModal("ArrowLeft");
-    }
+    if (isLeftSwipe) moveModal("ArrowRight");
+    else if (isRightSwipe) moveModal("ArrowLeft");
 
     // Reset touch start and end
     setTouchStart(null);
@@ -168,15 +124,15 @@ const Modal = ({
     <>
       <div
         className="bg__modal"
-        onClick={(e) => handleOnClick(e)}
-        onKeyDownCapture={(e) => handleKeyDown(e)}
+        onClick={handleOnClick}
+        onKeyDownCapture={handleKeyDown}
         onTouchStart={handleTouchStart}
         onTouchMove={handleTouchMove}
         onTouchEnd={handleTouchEnd}
         tabIndex="0"
         ref={modalRef}
       >
-        <div className="modal">
+        <div key={id} className={`modal ${animationClass}`}>
           <div className="modal__content">
             <div className="modal__header">
               <h2>{name}</h2>

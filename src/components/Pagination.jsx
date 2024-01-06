@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react";
-import createArray from "../helpers/functions";
+import { useEffect } from "react";
+import { createArray } from "../helpers/functions";
 
 function Pagination({
   currentPage,

@@ -30,6 +30,8 @@
 
   transition: all;
   transition-duration: 1000ms;
+
+  animation: fadeIn 0.1s;
 }
 
 @media screen and (min-width: 768px) {
@@ -188,5 +190,43 @@
   }
   .modal__leftarrow {
     left: 1.95%;
+  }
+}
+
+/*  animation */
+/* Animación de entrada desde la derecha */
+.slideInLeft {
+  animation: slideInLeft 0.55s ease-in-out, fadeIn 0.4s ease-in-out;
+}
+
+@keyframes slideInLeft {
+  from {
+    left: 55%;
+  }
+  to {
+    left: 50%;
+  }
+}
+
+/* Animación de entrada desde la derecha */
+.slideInRight {
+  animation: slideInRight 0.55s ease-in-out, fadeIn 0.4s ease-in-out;
+}
+
+@keyframes slideInRight {
+  from {
+    left: 45%;
+  }
+  to {
+    left: 50%;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }

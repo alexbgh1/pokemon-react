@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import Spinner from "./Spinner";
 import { getPokemons } from "../data/pokemones";
-import createArray from "../helpers/functions";
+import { createArray } from "../helpers/functions";
 
 function Formulario({
   setLoading,
